@@ -12,23 +12,11 @@ steps:
     versionSpec: '>= 2.5'
 
 - script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
+    gem install mdl
+  displayName: 'mdl install'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
-
-# - script: bundle exec rspec spec --format RspecJunitFormatter --out test_results/TEST-rspec.xml
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testResultsFiles: '**/test-*.xml'
-    testRunTitle: 'Ruby tests'
-    
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: Cobertura
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+- script: |
+    mdl --help 
+    mdl sample.md -v
+    echo "shell error code $?"
+  displayName: 'md lint'
