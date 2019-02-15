@@ -17,6 +17,6 @@ steps:
 
 - script: |
     mdl --help 
-    mdl sample.md
+    mdl sample.md -v
     echo "shell error code $?"
   displayName: 'md lint'
