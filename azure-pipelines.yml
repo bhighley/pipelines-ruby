@@ -16,5 +16,7 @@ steps:
   displayName: 'mdl install'
 
 - script: |
+    mdl --help 
     mdl sample.md
+    echo "shell error code $?"
   displayName: 'md lint'
