@@ -1,3 +1,6 @@
+# Build Status
+Markdown Linter Execution [![Build Status](https://dev.azure.com/GH-Bell-Workshop-Test-Org/GH-BELL-TEST-1/_apis/build/status/bhighley.pipelines-ruby?branchName=master)](https://dev.azure.com/GH-Bell-Workshop-Test-Org/GH-BELL-TEST-1/_build/latest?definitionId=8&branchName=master)
+
 
 # Contributing
 
