@@ -16,5 +16,5 @@ steps:
   displayName: 'mdl install'
 
 - script: |
-    mdl *
+    mdl *.md
   displayName: 'md lint'
